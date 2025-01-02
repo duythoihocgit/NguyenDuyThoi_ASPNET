@@ -17,5 +17,6 @@ namespace NguyenDuyThoi_2122110066.Controllers
         {
             return View();
         }
+
     }
 }
