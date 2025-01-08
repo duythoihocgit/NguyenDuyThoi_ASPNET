@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace NguyenDuyThoi_2122110066.Areas.Admin.Controllers
 {
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
-        // GET: Admin/Home
-        public ActionResult Index()
+        // GET: Admin/Dashboard
+        public ActionResult Dashboard()
         {
             return View();
         }

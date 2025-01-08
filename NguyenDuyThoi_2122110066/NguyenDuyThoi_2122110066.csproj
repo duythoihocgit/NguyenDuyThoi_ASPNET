@@ -129,42 +129,37 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
-    <Compile Include="Context\brand.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Areas\Admin\Controllers\BEProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Context\Brand.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\cart.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Context\Category.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\category.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\Model1.Context.cs">
+    <Compile Include="Context\dbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>dbModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\Model1.cs">
+    <Compile Include="Context\dbModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\Model1.Designer.cs">
+    <Compile Include="Context\dbModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>dbModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Context\order.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Context\Order.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\orderdetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Context\Product.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\product.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\user.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Context\User.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
@@ -174,6 +169,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2143,6 +2139,11 @@
     <Content Include="Content\images\banners\slide1.jpg" />
     <Content Include="Content\images\banners\slide2.jpg" />
     <Content Include="Content\images\banners\slide3.jpg" />
+    <Content Include="Content\images\category\headphones.jpg" />
+    <Content Include="Content\images\category\laptops.jpg" />
+    <Content Include="Content\images\category\smartphones.jpg" />
+    <Content Include="Content\images\category\tvs.jpg" />
+    <Content Include="Content\images\category\watches.jpg" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\icons\flags\AU%402x.png" />
     <Content Include="Content\images\icons\flags\AU.png" />
@@ -2184,6 +2185,26 @@
     <Content Include="Content\images\items\7.jpg" />
     <Content Include="Content\images\items\8.jpg" />
     <Content Include="Content\images\items\9.jpg" />
+    <Content Include="Content\images\items\apple_watch.jpg" />
+    <Content Include="Content\images\items\dell_xps13.jpg" />
+    <Content Include="Content\images\items\galaxy_s21.jpg" />
+    <Content Include="Content\images\items\galaxy_watch.jpg" />
+    <Content Include="Content\images\items\gaming_console.jpg" />
+    <Content Include="Content\images\items\headphones.jpg" />
+    <Content Include="Content\images\items\laptop2.jpg" />
+    <Content Include="Content\images\items\laptops.jpg" />
+    <Content Include="Content\images\items\laptop_pro.jpg" />
+    <Content Include="Content\images\items\lg_smart_tv.jpg" />
+    <Content Include="Content\images\items\lg_tone_free.jpg" />
+    <Content Include="Content\images\items\macbook_pro.jpg" />
+    <Content Include="Content\images\items\smartphones.jpg" />
+    <Content Include="Content\images\items\smartphone_x.jpg" />
+    <Content Include="Content\images\items\smart_tv.jpg" />
+    <Content Include="Content\images\items\sony_bravia.jpg" />
+    <Content Include="Content\images\items\sony_wh1000xm4.png" />
+    <Content Include="Content\images\items\tvs.jpg" />
+    <Content Include="Content\images\items\watches.jpg" />
+    <Content Include="Content\images\items\watchs.jpg" />
     <Content Include="Content\images\logo-white.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\logo.svg" />
@@ -2197,15 +2218,15 @@
     <Content Include="Content\js\bootstrap.bundle.min.js" />
     <Content Include="Content\js\jquery-2.0.0.min.js" />
     <Content Include="Content\js\script.js" />
-    <Content Include="Context\Model1.Context.tt">
+    <Content Include="Context\dbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>dbModel.edmx</DependentUpon>
+      <LastGenOutput>dbModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Context\Model1.tt">
+    <Content Include="Context\dbModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>dbModel.edmx</DependentUpon>
+      <LastGenOutput>dbModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -2243,7 +2264,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\dist\css\adminlte.css.map" />
     <Content Include="Content\admin\dist\css\adminlte.min.css.map" />
     <Content Include="Content\admin\dist\css\alt\adminlte.components.css.map" />
@@ -2377,13 +2397,19 @@
     <Content Include="Content\admin\plugins\summernote\summernote.js.map" />
     <Content Include="Content\admin\plugins\summernote\summernote.min.js.map" />
     <Content Include="Content\admin\plugins\toastr\toastr.js.map" />
-    <EntityDeploy Include="Context\Model1.edmx">
+    <Content Include="Areas\Admin\Views\Dashboard\Dashboard.cshtml" />
+    <Content Include="Content\images\items\iphone_13.jpg" />
+    <EntityDeploy Include="Context\dbModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Context\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Context\dbModel.edmx.diagram">
+      <DependentUpon>dbModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\BEProduct\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BEProduct\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\BEProduct\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\BEProduct\Delete.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2413,15 +2439,14 @@
     <Content Include="Views\Product\Listing_large.cshtml" />
     <Content Include="Views\Product\Listing_grid.cshtml" />
     <Content Include="Views\Product\Category.cshtml" />
-    <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Cart\Detail.cshtml" />
     <Content Include="Views\Content\Detail.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

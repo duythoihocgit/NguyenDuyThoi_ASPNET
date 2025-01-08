@@ -13,10 +13,10 @@ namespace NguyenDuyThoi_2122110066.Context
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NguyenDuyThoi_NetEntities : DbContext
+    public partial class Asp_netEntitie2s : DbContext
     {
-        public NguyenDuyThoi_NetEntities()
-            : base("name=NguyenDuyThoi_NetEntities")
+        public Asp_netEntitie2s()
+            : base("name=Asp_netEntitie2s")
         {
         }
     
@@ -25,12 +25,10 @@ namespace NguyenDuyThoi_2122110066.Context
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<brand> brands { get; set; }
-        public virtual DbSet<cart> carts { get; set; }
-        public virtual DbSet<category> categories { get; set; }
-        public virtual DbSet<orderdetail> orderdetails { get; set; }
-        public virtual DbSet<order> orders { get; set; }
-        public virtual DbSet<product> products { get; set; }
-        public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

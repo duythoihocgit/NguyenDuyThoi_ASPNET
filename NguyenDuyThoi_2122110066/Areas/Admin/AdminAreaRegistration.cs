@@ -17,7 +17,7 @@ namespace NguyenDuyThoi_2122110066.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Dashboard", id = UrlParameter.Optional }
             );
         }
     }

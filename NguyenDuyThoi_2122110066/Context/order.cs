@@ -12,13 +12,13 @@ namespace NguyenDuyThoi_2122110066.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class order
+    public partial class Order
     {
-        public int id { get; set; }
-        public int user_id { get; set; }
-        public decimal total_price { get; set; }
-        public string status { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public Nullable<int> ProductId { get; set; }
+        public Nullable<double> Price { get; set; }
+        public Nullable<int> Status { get; set; }
+        public System.DateTime CreatedOnUtc { get; set; }
     }
 }

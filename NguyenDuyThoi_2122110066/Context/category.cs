@@ -12,12 +12,14 @@ namespace NguyenDuyThoi_2122110066.Context
     using System;
     using System.Collections.Generic;
     
-    public partial class category
+    public partial class Category
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string slug { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Avatar { get; set; }
+        public string Slug { get; set; }
+        public Nullable<bool> ShowOnHomePage { get; set; }
+        public Nullable<int> DisplayOrder { get; set; }
+        public bool Deleted { get; set; }
     }
 }

@@ -11,18 +11,26 @@ namespace NguyenDuyThoi_2122110066.Context
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class product
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    public partial class Product
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public decimal price { get; set; }
-        public Nullable<int> quantity { get; set; }
-        public string image { get; set; }
-        public Nullable<int> category_id { get; set; }
-        public Nullable<int> brand_id { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Avatar { get; set; }
+        public Nullable<int> CategoryId { get; set; }
+        public string ShortDes { get; set; }
+        public string FullDescription { get; set; }
+        public Nullable<double> Price { get; set; }
+        public Nullable<double> PriceDiscount { get; set; }
+        public Nullable<int> TypeId { get; set; }
+        public string Slug { get; set; }
+        public Nullable<int> BrandId { get; set; }
+        public Nullable<bool> Deleted { get; set; }
+        public Nullable<bool> ShowOnHomePage { get; set; }
+        public Nullable<int> DisplayOrder { get; set; }
+
+        [NotMapped]
+        public System.Web.HttpPostedFileBase ImageUpload { get; set; }
     }
 }
